@@ -6,7 +6,12 @@ async function promiseToGreet(): Promise<void> {
   console.log("hello world"!);
 }
 
+async function promiseToAdd(a: number, b: number){
+  return a+b;
+}
+
 greet();
-// promiseToGreet()
-// greet().then(() => console.log("CANNOT do this"));
-// promiseToGreet().then(() => console.log("CAN do this"));
+promiseToGreet()
+//greet().then(() => console.log("CANNOT do this"));
+promiseToGreet().then(() => console.log("CAN do this"));
+promiseToAdd(2,3).then((res) =>console.log("result is: " + res)) 
